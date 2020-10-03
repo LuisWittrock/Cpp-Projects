@@ -1,2 +1,3 @@
-# GameofLife
-My own sourcecode for Conways Game of Life-
+#Everything here is my own Sourcecode.
+
+Just some random stuff I made 
