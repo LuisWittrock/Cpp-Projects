@@ -35,7 +35,7 @@ int main()
         }
         if(moves == 9)
         {
-            cout << "*** Draw ***";
+            cout << "*** Draw ***   \n";
             break;
         }
         cout << " \n Thinking... \n \n";
@@ -199,12 +199,12 @@ void computerMove()
     {
         if(arr[i] == 'x')
         {
-            for(int j = 0; j<9; j++)
+            for(int j = i; j<9; j++)
             {
                 if(arr[j] == ' ')
                 {
                     arr[j] = 'x';
-                    for(int k = 0; k<9; k++)
+                    for(int k = j; k<9; k++)
                     {
                         if(arr[k] == ' ')
                         {
