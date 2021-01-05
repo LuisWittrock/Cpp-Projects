@@ -177,7 +177,7 @@ void computerMove()
     }
 
     //block enemy fork:
-    for(int i = 0; i<9; i++)
+/*    for(int i = 0; i<9; i++)
     {
         if(arr[i] == ' ')
         {
@@ -193,7 +193,7 @@ void computerMove()
             }
         }
     }
-
+*/
     //make move that will win next round:
     for(int i = 0; i<9; i++)
     {
