@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <stdio.h>
+#include <math.h>
 #include <unistd.h>
 #include <filesystem>
 #include <boost/filesystem.hpp>
@@ -32,7 +33,9 @@ class Shell
         void exit(); //done
         void clear(); //done
         void help(); //wip
-        void showFiles();
+        void showFiles(); //done
+        void bintodec(); //done
+        void dectobin(); //done
 
         bool getRunning();
         void getCommand();
@@ -185,8 +188,38 @@ void Shell::showFiles()
             std::cout << entry << "\n";
     
 }
+void Shell::dectobin()
+{
+    cout << "decimal to binary \n";
+    int num;
+    cin >> num;
+    string sum;
+    cout << endl;			
+    while(num != 0)
+    {
+        sum.insert(0,(to_string(num % 2)));
+        num /= 2;
+        
+    }
+    cout << sum << endl;
+}
+void Shell::bintodec()
+{
+    cout << "binary to decimal \n";
+    int sum = 0;
+    string num;
+    cout << endl; 
+    cin >> num;
 
-
+    for(int i = 0, j = num.length()-1; i < num.length(); i++, j--)
+    {
+        if(num[i] == '1')
+        {
+            sum += pow(2, j);
+        }
+    }
+    cout << sum << endl;
+}
 
 //functions just working in the backgroung
 bool Shell::getRunning()
@@ -207,6 +240,14 @@ void Shell::input()
     if(command == "add")
     {
         add();
+    }
+    else if(command == "binary")
+    {
+        dectobin();
+    }
+    else if(command == "decimal")
+    {
+        bintodec();
     }
     else if(command == "subtract")
     {
