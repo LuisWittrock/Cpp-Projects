@@ -134,9 +134,12 @@ void Shell::help()
     cout << "List of all commands: \n \n";
     cout << "add 'number... number...'       = adds all the numbers behind 'add' \n";
     cout << "subtract 'number... number...'  = subtracts all the numbers behind 'subtract' \n";
+    cout << "multiplicate 'number... number' = multiplicates all the number behind the keyword \n";
+    cout << "divide 'number... number'       = divide all the numbers behind the keyword  \n";
     cout << "clear                           = clears console \n";
     cout << "exit                            = closes console \n";
     cout << "history '-c / -s'               = -c clears history / -s shows history \n";
+
 }
 void Shell::divide()
 {
