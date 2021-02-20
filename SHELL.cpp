@@ -139,6 +139,7 @@ void Shell::help()
     cout << "clear                           = clears console \n";
     cout << "exit                            = closes console \n";
     cout << "history '-c / -s'               = -c clears history / -s shows history \n";
+    cout << "ls                              = shows all files in current directory \n";
 
 }
 void Shell::divide()
@@ -193,7 +194,6 @@ void Shell::showFiles()
 }
 void Shell::dectobin()
 {
-    cout << "decimal to binary \n";
     int num;
     cin >> num;
     string sum;
@@ -208,7 +208,6 @@ void Shell::dectobin()
 }
 void Shell::bintodec()
 {
-    cout << "binary to decimal \n";
     int sum = 0;
     string num;
     cout << endl; 
